@@ -2,7 +2,6 @@ const dino = document.querySelector('.dino');
 const background = document.querySelector('.background');
 let isJumping = false;
 let position = 0;
-//ver site key code event tool para saber o codigo da tecla
 function handleKeyUp(event) {
   if (event.keyCode === 32) {
     if (!isJumping) {
@@ -59,7 +58,6 @@ function createCactus() {
       cactus.style.left = cactusPosition + 'px';
     }
   }, 20);
-//recursividade - uma função chamando ela mesma - vide createCactus que é uma função e foi chamada aqui com setTimeout causando um efeito espelho, um chamando o outro infinitamente
   setTimeout(createCactus, randomTime);
 }
 createCactus();
